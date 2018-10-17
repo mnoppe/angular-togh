@@ -1,26 +1,26 @@
-# AngularToh
+# Angular 6 - togh
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
+:sparkles: This project was generated with:
+* [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4
+* [Node.js] (https://nodejs.org) version 8.12.0
+* [Angular] (https://angular.io) version 6.1.10
+* [Bootstrap] (https://getbootstrap.com) version 4.1.3
+* [Font Awesome] (https://fontawesome.com/how-to-use/on-the-web/using-with/angular) version 5.1.4 - Official angular font Awesome component.
+* [Prime NG] (https://www.primefaces.org/primeng/#) version 6.1.5 - For the toast component. 
 
-## Development server
+## Getting started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Download zip or clone it
+* Change directory to your folder
+* Run ```npm install```
+* Run ```ng serve```
+* Navigate to `http://localhost:4200/`
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run ```ng g c component-name``` to generate a new component, g for generate, c for component. 
+You can also use ```ng generate directive|pipe|service|class|guard|interface|enum|module```.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 
