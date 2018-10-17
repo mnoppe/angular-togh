@@ -1,0 +1,20 @@
+
+<h3 class="my-4">{{title}}</h3>
+<div class="row" *ngIf="heroes">
+  <div class="col-lg-6">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+          <span class="input-group-text"><fa-icon [icon]="faSearch" class="mr-2"></fa-icon></span>
+      </div>
+      <input class="form-control" placeholder="Search..." [(ngModel)]="searchTerm">
+    </div>
+    
+    <ul class="list-group" *ngFor="let hero of heroes | filter: searchTerm">
+      <li class="list-group-item" routerLink="/hero/{{hero.id}}">
+        <span>{{hero.name}}</span>
+        <button type="button" class="btn btn-outline-danger float-right" (click)="delete(hero)"><fa-icon [icon]="faTrashAlt" class="red"></fa-icon></button>
+      </li>
+    </ul>
+    <button type="button" class="btn btn-success mt-3" (click)="add(hero)">Add</button>
+  </div>
+</div>
