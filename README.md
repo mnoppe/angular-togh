@@ -1,4 +1,4 @@
-# Angular 6 - togh
+# Angular 6 - togh (tour of guitar heroes - based on angular tour of heroes)
 
 :sparkles: This project was generated with:
 * [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4
