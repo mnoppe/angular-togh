@@ -1,0 +1,12 @@
+<div class="row my-3">
+    <div class="col-xs-12">
+        <button class="btn btn-success" (click)="newHero()">New Guitar Hero</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="list-group">
+            <app-hero-item *ngFor="let hero of heroes; let i=index" [hero]="hero" [index]="i"></app-hero-item>
+        </ul> 
+    </div>
+</div>

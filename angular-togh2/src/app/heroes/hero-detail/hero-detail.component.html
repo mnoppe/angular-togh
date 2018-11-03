@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-xs-12">
+      <img [src]="hero.imagePath" alt="{{hero.name}}" class="img-responsive" style="max-height: 300px;">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{hero.name}}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success mr-1" (click)="editHero()">Edit</button>
+    <button class="btn btn-danger mr-1" (click)="deleteHero()">Delete</button>
+    <button class="btn btn-default" (click)="goBack()">Back</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 my-4">
+    <p-fieldset legend="Description" [toggleable]="true" [collapsed]="true">
+      {{hero.description}}
+    </p-fieldset>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group" *ngFor="let member of hero.members">
+      <li class="list-group-item mb-2">{{member.name}} ({{member.since}} - {{member.to || "current"}}): {{member.instrument}}</li>
+    </ul>
+  </div>
+</div>

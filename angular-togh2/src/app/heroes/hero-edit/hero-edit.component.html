@@ -1,0 +1,65 @@
+<div class="row my-3">
+  <div class="col-lg-12">
+    <form [formGroup]="formHero" (ngSubmit)="onSubmit()">
+      <div class="row col-12">
+        <button class="btn btn-success mr-1" type="submit" [disabled]="!formHero.valid">Save</button>
+        <button class="btn btn-default" type="button" (click)="onCancel()">Cancel</button>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="name">Name <span class="required">*</span></label>
+            <input type="text" id="name" class="form-control" formControlName="name">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="from-group">
+            <label for="imagePath">Image URL <span class="required">*</span></label>
+            <input type="text" id="imagePath" class="form-control" formControlName="imagePath" #imagePath>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <img [src]="imagePath.value" alt="" class="img-responsive" style="max-width: 500px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" rows="6" class="form-control" formControlName="description"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12" formArrayName="members">
+          <div class="row mb-2" *ngFor="let heroControl of formHero.get('members').controls; let i = index" [formGroupName]="i">
+            <div class="col-3">
+              <input type="text" class="form-control" formControlName="name">
+            </div>
+            <div class="col-2">
+              <input type="number" class="form-control"formControlName="since">
+            </div>
+            <div class="col-2">
+              <input type="number" class="form-control"formControlName="to">
+            </div>
+            <div class="col-3">
+              <input type="text" class="form-control"formControlName="instrument">
+            </div>
+            <div class="col-2">
+              <button type="button" class="btn btn-danger" (click)="onDeleteMember(i)">X</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <button class="btn btn-success" type="button" (click)="onAddMember()">Add member</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
